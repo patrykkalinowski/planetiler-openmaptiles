@@ -1,4 +1,6 @@
 package org.openmaptiles.addons;
+import org.openmaptiles.addons.PowerLine;
+import org.openmaptiles.addons.PowerMinorLine;
 
 import com.onthegomap.planetiler.config.PlanetilerConfig;
 import com.onthegomap.planetiler.stats.Stats;
@@ -14,6 +16,8 @@ public class ExtraLayers {
   public static List<Layer> create(Translations translations, PlanetilerConfig config, Stats stats) {
     return List.of(
       // Create classes that extend Layer interface in the addons package, then instantiate them here
+      new PowerLine(),
+      new PowerMinorLine()
     );
   }
 }
